@@ -2,6 +2,7 @@ class GobixCli < Formula
   desc "Gobix CLI for DMS documents, health checks, and API automation"
   homepage "https://dev.gobix.de/cli"
   version "0.1.1"
+  revision 1
   license "MIT"
 
   if Hardware::CPU.arm?
@@ -18,9 +19,11 @@ class GobixCli < Formula
     else
       bin.install "gobix-macos-x64" => "gobix"
     end
+    bin.install_symlink bin/"gobix" => "gobix-cli"
   end
 
   test do
     assert_match "Gobix CLI", shell_output("#{bin}/gobix --help")
+    assert_match "Gobix CLI", shell_output("#{bin}/gobix-cli --help")
   end
 end
