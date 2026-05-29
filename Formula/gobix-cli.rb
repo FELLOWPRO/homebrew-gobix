@@ -2,15 +2,15 @@ class GobixCli < Formula
   desc "Gobix CLI for DMS documents, health checks, and API automation"
   homepage "https://dev.gobix.de/cli"
   version "0.1.1"
-  revision 4
+  revision 5
   license "MIT"
 
   if Hardware::CPU.arm?
     url "https://dev.gobix.de/downloads/gobix-macos-arm64"
-    sha256 "41781c2fa519943c13ae195fc66bbd555c7ac7e2979d3c04b10f7068e1c032d6"
+    sha256 "69d09f6c397bd463139148ee7e6679b972c8b2ec07fa872e993563a68fb12cd8"
   else
     url "https://dev.gobix.de/downloads/gobix-macos-x64"
-    sha256 "e5a2c0806a4519b23d4f3697a09b23cb6704b86c3a815b731972deae63170ede"
+    sha256 "38d5ef47bfd82810a4830b027f490ed294f2d7fec9ff60b077ff39309d79c174"
   end
 
   def install
